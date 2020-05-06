@@ -1,0 +1,10 @@
+//this is a varible that can be used with scss
+$my-blue: #387780;
+
+//the variable is inserted in the scss below
+.btn {
+    background-color: $my-blue;
+    border: none;
+    padding: .5rem 1rem;
+    color: white;
+}

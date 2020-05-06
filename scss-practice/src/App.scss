@@ -1,0 +1,37 @@
+//you can use variables, nesting, mixins, imports/partials with scss
+//a partial means that there is an underscore before the file name so that it is not
+//transpiled into a css file
+
+
+//imports
+// @import 'styles/config';
+@import 'styles/buttons';
+@import 'styles/alerts';
+
+.App {
+  text-align: center;
+}
+
+//below I am nesting so that the img inside of the card class will receive this style
+.card {
+    img {
+      width: 20%;
+    }
+}
+
+
+//defining a mixin
+@mixin border-radius($radius) {
+  // border-radius: 40%;
+  border-radius: $radius;
+}
+
+//implementing the mixin to adjust border radius
+.btn {
+  @include border-radius(40%)
+}
+
+//use the same mixin to give different border radius to image
+img {
+  @include border-radius(20%)
+}
