@@ -1,2 +1,41 @@
-// $my-blue: #387780;
+//this is a partial class
+//you can define the varible here and anywhere you have imported this file, the changed variable will be reflected
+
+$my-blue: #387780;
 $my-red: #FF5666; 
+
+$base-spacing: 24px;
+$base-font-size: 16px;
+$base-line-height: $base-spacing;
+
+//spacing sizes
+$spacing-smaller: $base-spacing / 3;
+$spacing-small: $base-spacing / 2;
+$spacing-normal: $base-spacing;
+$spacing-large: $base-spacing * 1.5;
+$spacing-larger: $base-spacing * 2;
+$spacing-largest: $base-spacing * 3;
+
+// font sizes
+$font-xsmall: $base-font-size / 1.6;
+$font-small: $base-font-size / 1.5;
+$font-normal: $base-font-size;
+$font-large: $base-font-size * 1.5;
+$font-larger: $base-font-size * 2;
+$font-largest: $base-font-size * 3;
+
+// font weights
+$font-weight-light: 300;
+$font-weight-normal:400;
+$font-weight-bold: 500;
+$font-weight-bolder: 700;
+$font-weight-heading: $font-weight-bold;
+
+
+//header sizes
+$header-size-1: $base-font-size * 2.4;
+$header-size-2: $base-font-size * 1.5;
+$header-size-3: $base-font-size * 1.35;
+$header-size-4: $base-font-size * 1.2;
+$header-size-5: $base-font-size;
+$header-size-6: $base-font-size * 0.9;

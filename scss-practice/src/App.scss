@@ -4,12 +4,50 @@
 
 
 //imports
-// @import 'styles/config';
+@import 'styles/config';
 @import 'styles/buttons';
 @import 'styles/alerts';
+@import 'styles/fonts';
+@import 'styles/color-palette';
+@import 'styles/theme';
+@import 'styles/mixins';
 
+//implementing the mixin to adjust border radius
+.btn {
+  @include border-radius(45%)
+}
+
+//use the same mixin to give different border radius to image
+img {
+  @include border-radius(20%)
+}
 .App {
   text-align: center;
+}
+
+blockquote {
+  margin-left: 30%;
+  margin-right: 30%;
+  border-left: 3px solid $color2;
+  padding-left: $spacing-normal;
+}
+
+.box {
+  background: $color3;
+  padding: $spacing-normal;
+  margin-right: 25%;
+  margin-left: 25%;
+  color: $color1;
+  @include border-radius(50%);
+}
+
+.roundedBox {
+  //this uses all of the properties from the .box class
+  @extend .box;
+
+  //add specific styles in for just the roundedBox class
+  //these are called vendor prefixes so that other operating systems can support it, see mixins.scss
+  @include vendor(border-radius, $spacing-normal);
 }
 
 //below I am nesting so that the img inside of the card class will receive this style
@@ -19,19 +57,39 @@
     }
 }
 
+//using the variables from the config.scss file that were imported into this file
+.App {
+  //set line heights
+  line-height: $base-line-height;
 
-//defining a mixin
-@mixin border-radius($radius) {
-  // border-radius: 40%;
-  border-radius: $radius;
+  //set default font weights
+  font-weight: $font-weight-normal;
 }
 
-//implementing the mixin to adjust border radius
-.btn {
-  @include border-radius(40%)
+h1,h2,h3,h4,h5,h6 {
+  //set heading font weights
+  font-weight: $font-weight-heading;
 }
 
-//use the same mixin to give different border radius to image
-img {
-  @include border-radius(20%)
+//set heading sizes
+h1 {
+  font-size: $header-size-1;
+}
+h2 {
+  font-size: $header-size-2;
+}
+h3 {
+  font-size: $header-size-3;
+}
+h3 {
+  font-size: $header-size-3;
+}
+h4 {
+  font-size: $header-size-4;
+}
+h5 {
+  font-size: $header-size-5;
+}
+h6 {
+  font-size: $header-size-6;
 }

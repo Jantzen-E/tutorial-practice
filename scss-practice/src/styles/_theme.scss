@@ -1,0 +1,18 @@
+html {
+    background: $color1;
+    color: $color4;
+}
+
+//nesting using scss
+//the & symbol is the parent selector so &:hover is the same as a:hover
+a {
+    color: $color3;
+
+    &:hover {
+        color: $color2;
+    }
+}
+
+li {
+    color: $color5;
+}

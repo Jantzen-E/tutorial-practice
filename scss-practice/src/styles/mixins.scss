@@ -1,0 +1,13 @@
+//defining a mixin
+@mixin border-radius($radius) {
+    // border-radius: 40%;
+    border-radius: $radius;
+}
+
+//this mixin inserts the vendor prefixes
+@mixin vendor($property, $value...) {
+    -webkit--#{$property}: $value;
+    -moz--#{$property}: $value;
+    -ms--#{$property}: $value;
+    #{$property}: $value;
+}
