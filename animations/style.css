@@ -1,7 +1,8 @@
 body {
     margin: 0;
-    background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+    background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
     overflow-y: hidden;
+    background-blend-mode: normal;
 }
 
 h3 {
@@ -9,9 +10,10 @@ h3 {
 }
 
 .container {
-    height: 85vh;
+    height: 80vh;
     width: 70.1vw;
-    margin: 3.1rem auto;
+    margin: 1rem auto;
+    margin-bottom: 5rem;
     /* background: url('./assets/nightSky.jpeg'); */
     /* background-size: cover; */
     position: relative;
@@ -58,10 +60,10 @@ h3 {
         transform: translateY(-1px)
     }
     50%{
-        transform: translateY(-2px)
+        transform: translateY(-4px)
     }
     0%{
-        transform: translateY(2px)
+        transform: translateY(4px)
     }
 }
 
