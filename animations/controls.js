@@ -2,6 +2,7 @@ $(document).ready(function() {
     
     //variables
     $surface = $('.surface');
+    // $carSpeed = $('.car');
     $car = $('.car');
     $img = $('.car img');
     $nightSky = $('.night')
@@ -16,6 +17,7 @@ $(document).ready(function() {
             $($surface).toggleClass('moveRight');
             $($car).toggleClass('suspension');
             $($nightSky).toggleClass('nightSky');
+            // $($carSpeed).toggleClass('carSpeed');
         }
     })
 

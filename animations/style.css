@@ -10,10 +10,10 @@ h3 {
 }
 
 .container {
-    height: 80vh;
+    height: 75vh;
     width: 70.1vw;
     margin: 1rem auto;
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
     /* background: url('./assets/nightSky.jpeg'); */
     /* background-size: cover; */
     position: relative;
@@ -46,7 +46,7 @@ h3 {
 
 .car {
     position: absolute;
-    bottom: 10.5%;
+    bottom: 11.5%;
     left: 20%;
 }
 
@@ -54,6 +54,10 @@ h3 {
 @keyframes moveRight {
     100%{transform: translateX(-2950px)}
 }
+
+/* @keyframes carSpeed {
+    100%{transform: translateX(1000px)}
+} */
 
 @keyframes suspension {
     100%{
@@ -71,12 +75,17 @@ h3 {
     100%{transform: translateX(-1700px)}
 }
 
+
 .moveRight {
     animation: moveRight .5s linear infinite;
 }
 
+/* .carSpeed {
+    animation: carSpeed 20s linear infinite; 
+} */
+
 .suspension {
-    animation: suspension .2s linear infinite; 
+    animation: suspension .2s linear infinite;
 }
 
 .nightSky {
