@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+    overflow-y: hidden;
+}
+
+h3 {
+    text-align: center;
+}
+
+.container {
+    height: 85vh;
+    width: 70.1vw;
+    margin: 3.1rem auto;
+    /* background: url('./assets/nightSky.jpeg'); */
+    /* background-size: cover; */
+    position: relative;
+    box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.4);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.night {
+    height: 100%;
+    width: 130%;
+    background: url('./assets/nightSky.jpeg');
+    /* background-size: cover; */
+    display: block;
+    position: relative;
+    /* overflow-x: hidden; */
+    background-repeat: repeat-x infinite;
+}
+
+.surface {
+    height: 95px;
+    width: 700%;
+    background: url('./assets/surface.jpg');
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-repeat: repeat-x;
+}
+
+.car {
+    position: absolute;
+    bottom: 10.5%;
+    left: 20%;
+}
+
+/* Animation */
+@keyframes moveRight {
+    100%{transform: translateX(-2950px)}
+}
+
+@keyframes suspension {
+    100%{
+        transform: translateY(-1px)
+    }
+    50%{
+        transform: translateY(-2px)
+    }
+    0%{
+        transform: translateY(2px)
+    }
+}
+
+@keyframes nightSky {
+    100%{transform: translateX(-1700px)}
+}
+
+.moveRight {
+    animation: moveRight .5s linear infinite;
+}
+
+.suspension {
+    animation: suspension .2s linear infinite; 
+}
+
+.nightSky {
+    animation: nightSky 360s linear infinite;
+}
