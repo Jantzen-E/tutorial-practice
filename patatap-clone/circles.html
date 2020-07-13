@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circles</title>
+    <script type="text/javascript" src="paper-full.js"></script>
+    <link rel="stylesheet" href="circles.css">
+    <script type="text/paperscript" canvas="myCanvas">
+
+        // <!-- create a paper.js path to draw a line into it -->
+        // var path = newPath();
+        // <!-- give the stroke a color -->
+        // path.strokeColor = 'black';
+        // var start = new Point(100, 100);
+        // <!-- move to start and draw a line from there -->
+        // path.moveTo(start);
+        // <!-- note the plus operator on point objects
+        // paperscript does that for us, and much more -->
+        // path.lineTo(start + [ 100, -50 ]);
+
+        var myCircle = new Path.Circle(new Point(100, 100), 50);
+        myCircle.fillColor = 'purple';
+
+        var circle2 = new Path.Circle(new Point(200, 300), 100);
+        circle2.fillColor = 'red';
+</script>
+</head>
+<body>
+    <canvas id="myCanvas" resize></canvas>
+</body>
+</html>
