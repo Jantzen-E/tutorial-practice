@@ -10,26 +10,93 @@
 <body>
     <div class="container">
         <div class="header">
+            <!-- <p id='msg'></p> -->
             <div class="logo">
-                <div class="text"><span id="text"><span id="w3">W3</span><span id="shadow">C*</span></span><span id="svg">SVG</span></div>
+                <div class="text"><span id="white"><span id="w3">W3</span><span class="shadow">C<img src="./images/svg.jpg" alt=""></span></span><span id="svg">SVG</span></div>
             </div>
         </div>
         <div class="page">
             <div class="form">
-                <form>
+                <form name="login">
                     <p id="formTitle">Please enter the following information</p>
-
-                    <label for="ssn">ssn (last 4) xxx-xx- </label>
-                    <input type="text" name="ssn" id="ssn" maxlength="4" placeholder="xxxx">
-
-                    <label for="birthdate">date of birth</label>
-                    <input type="date">
-
-                    <label for="submitButton"></label>
-                    <input type="submit" value="submit" id="submitButton">
+                    <hr>
+                    <div class="inputs">
+                        <label for="ssn">ssn (last 4) xxx-xx- </label>
+                        <input type="text" name="ssn" id="ssn" maxlength="4" placeholder="xxxx" required>
+    
+                        <label for="dob">date of birth</label>
+                        <input type="date" name="dob" id="dob" placeholder="mm/dd/yyyy" required>
+    
+                        <label for="submitButton"></label>
+                        <button type="submit" value="submit" id="submitButton" disabled="disabled" onClick="confirm(`You entered `+ ssn.value + ` as the last 4 digits of your SSN and ` + dob.value + ` as your date of birth.  Do you wish to continue?`)" >SUBMIT</button>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
+<!-- <script> 
+    let field1 = document.getElementbyId("ssn"); 
+    let field2 = document.getElementbyId("dob");
+</script> -->
+<!-- <script>
+    var userPreference;
+    
+    function ask() {
+        if (confirm(`You entered `+ ssn.value + ` as the last 4 of your SSN and ` + dob.value + ` as your date of birth.  Do you wish to continue?`) == true) {
+            userPreference = "account has been verified";
+        }
+        else {
+            userPreference = "login process cancelled";
+        }
+
+        document.getElementById("msg").innerHTML = userPreference;
+    }
+</script> -->
+<!-- <script>
+    var inp = document.getElementsByTagName("input");
+    var btn = document.getElementbyId("submitButton");
+
+    btn.disabled = "disabled";
+
+    function checkForm() {
+        for (var i = 0; i < inp.length; i++) {
+            if (inp[i].checkValidity() == false) {
+                btn.disabled = "disabled";
+            } else {
+                btn.disabled = false;
+            }
+        }
+    }
+</script> -->
+<!-- <script>
+    function EnableDisable(inp) {
+        let btn = document.getElementById("submitButton");
+        let inp = document.getElementsByTagName("input");
+
+        if (inp.value.trim() == " ") {
+            btn.disabled = true;
+        }
+        else {
+            btn.disabled = false;
+        }
+    };
+</script> -->
+<!-- <script>
+    function checkform() {
+        var f = document.forms["login"].elements;
+        var cansubmit = true;
+
+        for (var i = 0; i < f.length; i++) {
+            if (f[i].value.length == 0) cansubmit = false
+        }
+
+        if(cansubmit) {
+            document.getElementbyId('submitButton').disabled = false;
+        }
+        else {
+            document.getElementbyId('submitButton').disabled = 'disabled';
+        }
+    }
+</script> -->
 </body>
 </html>
