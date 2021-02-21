@@ -3,6 +3,10 @@
 <head>
     <title>Replicate</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +15,7 @@
     <div class="page">
         <div class="header">
             <div class="completeImage">
-                <span class="w3c"><span id="w3">W3</span><span id="textShadow">C</span></span><span class="logo"><img src="../images/svg.jpg" alt="svg logo"></span><span id="svg">SVG</span>
+                <span class="w3c"><span id="w3">W3</span><span id="textShadow">C</span></span><span class="logo"><img src="../images/svg.jpg" alt="svg logo" id="blueStar"></span><span id="svg">SVG</span>
             </div>
         </div>
         <div class="form">
@@ -20,20 +24,21 @@
                 <hr>
                     <div class="grid">
                         <div class="labelInput1">
-                            <label>ssn (last 4) xxx-xx- </label>
-                            <input type="text" class="inputs">
+                            <label for="ssn">ssn (last 4) xxx-xx- </label>
+                            <input type="text" name="ssn" class="inputs" placeholder=" xxxx" id="ssn" required maxlength="4">
                         </div>
                         <div class="labelInput2">
-                            <label>date of birth</label>
-                            <input type="date" class="inputs">
+                            <label for="dobInput">date of birth</label>
+                            <input type="date" class="inputs" id="dobInput" name="dobInput" placeholder="mm/dd/yyy" required>
                         </div>
                     </div>
                     <div class="button">
-                        <label></label>
-                        <button>SUBMIT</button>
+                        <label for="submitButton"></label>
+                        <button type="submit" value="submit" id="submitButton" onClick="confirm(`You entered `+ ssn.value + ` as the last 4 digits of your SSN and ` + dob.value + ` as your date of birth.  Do you wish to continue?`)">SUBMIT</button>
                     </div>
             </form>
         </div>
     </div>
+<!-- <script>alert("hello world")</script> -->
 </body>
 </html>
