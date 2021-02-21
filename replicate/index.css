@@ -1,0 +1,115 @@
+.header {
+    height: 4em;
+    background-color: white;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 3px 5px #cecece;
+    font-size: 1.7em;
+}
+
+.page {
+    background-color: #F1F2F3;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+hr {
+    margin-bottom: 30px;
+    box-shadow: 0px 3px #f8f8f8;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid #e7e7e7;
+    margin-top: 0;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+p {
+    text-align: center;
+    color: #4B71B0;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+label {
+    text-align: center;
+    color: #e4e4e4;
+    grid-column: 1 / 2;
+    text-align: right;
+}
+
+input {
+    text-align: center;
+    width: 40%;
+    grid-column: 2 / 3;
+}
+
+form {
+    width: 56%;
+    height: 30%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    margin-bottom: 10%;
+    margin-top: 30px;
+    border: 1px solid #ebebeb;
+    box-shadow: 0px 2px 2px #cecece;
+}
+
+button {
+    background-color: #A1C55B;
+    color: white;
+    box-shadow: 0px 4px #717A5E;
+    border-radius: 20px;
+    width: 130px;
+    height: 30px;
+    border: none;
+    font-weight: 600;
+    width: 130px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+#w3 {
+    color: #4B71B0;
+}
+
+#textShadow {
+    text-shadow: 1px 2px black;
+    color: white;
+}
+
+#svg {
+    color: white;
+    background-color: #4B71B0;
+}
+
+.labelInput1 {
+    margin-bottom: 6px;
+    /* text-align: center; */
+}
+
+.labelInput2 {
+    margin-bottom: 6px;
+    /* text-align: center; */
+}
+
+.button {
+    text-align: right;
+    margin-right: 40px;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    margin-left: 40px;
+}
+
+.grid {
+    display: grid;
+}
