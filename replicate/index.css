@@ -52,7 +52,6 @@ p {
 }
 
 label {
-    text-align: center;
     color: #e4e4e4;
     text-align: right;
     display: inline-block;
@@ -85,20 +84,22 @@ form {
 }
 
 button {
-    /* background-color: #A1C55B;
-    box-shadow: 0px 4px #717A5E; */
     background-color: #EDF0ED;
     box-shadow: 0px 4px #D9E2DB;
     color: white;
     border-radius: 20px;
-    width: 100px;
     height: 40px;
-    border: none;
-    font-weight: 600;
     width: 130px;
     font-size: 1.1em;
+    border: none;
+    font-weight: 600;
     margin-bottom: 35px;
     margin-top: 10px;
+}
+
+.enabled {
+    background-color: #A1C55B;
+    box-shadow: 0px 4px #717A5E;
 }
 
 #w3 {
@@ -180,4 +181,101 @@ button {
 
 .completeImage {
     font-size: 1.7em;
+}
+
+/* media queries for responsive web page */
+@media screen and (max-width: 850px) {
+    .page {
+        background-color: #1a86f3;
+    }
+
+    p {
+        font-size: 1.7em;
+    }
+
+    label {
+        font-size: .8em;
+    }
+
+    input {
+        font-size: .7em;
+    }
+
+    button {
+        height: 30px;
+        width: 100px;
+        font-size: .8em;
+    }
+
+    form {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 808px) {
+    .page {
+        background-color: #13eb42;
+    }
+
+    .inputs {
+        margin-right: 20px;
+    }
+
+    label {
+        text-align: center;
+        font-size: .6em;
+    }
+
+    input {
+        width: 30%;
+        font-size: .6em;
+    }
+
+    p {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .page {
+        background-color: pink;
+    }
+
+    button {
+        height: 20px;
+        width: 67px;
+        font-size: .6em;
+    }
+
+    form {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .page {
+        background-color: red;
+    }
+
+    input {
+        width: 70%;
+    }
+
+    .inputs {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+
+    #dobInput {
+        margin-bottom: 0;
+    }
+
+    #submitButton {
+        margin-top: 20px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
 }
