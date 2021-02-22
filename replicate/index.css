@@ -44,7 +44,7 @@ img {
 
 p {
     text-align: center;
-    color: #377eb4;
+    color: #2973AF;
     font-size: 2em;
     font-weight: 600;
     margin-top: 10px;
@@ -52,7 +52,7 @@ p {
 }
 
 label {
-    color: #e4e4e4;
+    color: #CFD8E8;
     text-align: right;
     display: inline-block;
     width: 170px;
@@ -121,7 +121,7 @@ button {
 }
 
 #textShadow {
-    text-shadow: 1px 3px black;
+    text-shadow: 1px 3px #221B0B;
     color: white;
     border-top: 1px solid #0A5B9A;
     border-bottom: 3px solid #0A5B9A;
@@ -182,6 +182,7 @@ button {
 .completeImage {
     font-size: 1.7em;
 }
+
 
 /* media queries for responsive web page */
 @media screen and (max-width: 850px) {
@@ -252,6 +253,12 @@ button {
     }
 }
 
+@media screen and (max-width: 435px) {
+    form {
+        width: 74%;
+    }
+}
+
 @media screen and (max-width: 420px) {
     .page {
         background-color: red;
@@ -277,5 +284,15 @@ button {
 
     p {
         margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    p {
+        font-size: 1.1em;
+    }
+
+    form {
+        width: 80%;
     }
 }
