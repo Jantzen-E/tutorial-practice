@@ -4,9 +4,12 @@ const User = require('./models/user');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
+// const mongoDbUrl = process.env.ATLAS_CONNECTION;
+// const dotenv = require('dotenv');
+// dotenv.config();
 
 //connect to the database
-mongoose.connect('mongodb+srv://dbUser:Jodido88@cluster0.cyvh8.gcp.mongodb.net/login-db', { useUnifiedTopology: true, useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/login-db', { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => {
         console.log("mongo connection open")
     })
