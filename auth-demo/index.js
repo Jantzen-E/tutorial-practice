@@ -5,8 +5,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 // const mongoDbUrl = process.env.ATLAS_CONNECTION;
-// const dotenv = require('dotenv');
-// dotenv.config();
+// require('dotenv').config();
 
 //connect to the database
 mongoose.connect('mongodb://localhost:27017/login-db', { useUnifiedTopology: true, useNewUrlParser: true })
@@ -21,7 +20,7 @@ mongoose.connect('mongodb://localhost:27017/login-db', { useUnifiedTopology: tru
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 app.use(express.urlencoded({ extended: true }));
-app.use(session({ secret: 'notagoodsecret' }))
+app.use(session({ secret: 'notagoodsecret' }));
 
 app.get('/', (req, res) => {
     res.send('this is the home page')
