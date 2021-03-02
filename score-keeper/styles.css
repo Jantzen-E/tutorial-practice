@@ -1,0 +1,52 @@
+body {
+    text-align: center;
+    border: 1px solid grey;
+    margin-right: 29%;
+    margin-left: 29%;
+}
+
+#player1 {
+    background-color: rgb(22, 163, 45);
+    color: white;
+    width: 33%;
+    height: 35px;
+}
+
+#player2 {
+    background-color: rgb(13, 105, 158);
+    color: white;
+    width: 33%;
+    height: 35px;
+}
+
+#resetButton {
+    background-color: rgb(212, 59, 32);
+    color: white;
+    width: 33%;
+    height: 35px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+h4 {
+    text-align: left;
+}
+
+label {
+    font-size: 1.3em;
+    text-align: left;
+}
+
+select {
+    text-align: left;
+}
+
+h1 {
+    text-align: left;
+}
+
+h3 {
+    text-align: left;
+}
