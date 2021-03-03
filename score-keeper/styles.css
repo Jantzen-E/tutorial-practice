@@ -5,14 +5,14 @@ body {
     margin-left: 29%;
 }
 
-#player1 {
+#p1button {
     background-color: rgb(22, 163, 45);
     color: white;
     width: 33%;
     height: 35px;
 }
 
-#player2 {
+#p2button {
     background-color: rgb(13, 105, 158);
     color: white;
     width: 33%;

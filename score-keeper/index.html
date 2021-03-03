@@ -13,7 +13,7 @@
         <hr>
         <h4>Ping Pong Score keeper</h4>
         <hr>
-        <h1 class="score">0 to 0</h1>
+        <h1 class="score"><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
         <h3>Use the button below to keep score.</h3>
         <label for="scoreMax">Playing To</label>
         <select id="scoreMax">
@@ -24,10 +24,11 @@
             <option value="">7</option>
         </select>
         <div>
-            <button id="player1">+1 Player 1</button>
-            <button id="player2">+1 Player 2</button>
+            <button id="p1button">+1 Player 1</button>
+            <button id="p2button">+1 Player 2</button>
             <button id="resetButton">Reset</button>
         </div>
     </div>
+<script src="app.js"></script>
 </body>
 </html>
