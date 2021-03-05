@@ -31,7 +31,7 @@ button {
 }
 
 h4 {
-    text-align: left;
+    text-align: center;
 }
 
 label {
@@ -44,9 +44,17 @@ select {
 }
 
 h1 {
-    text-align: left;
+    text-align: center;
 }
 
 h3 {
-    text-align: left;
+    text-align: center;
+}
+
+.winner {
+    color: green;
+}
+
+.loser {
+    color: red;
 }
