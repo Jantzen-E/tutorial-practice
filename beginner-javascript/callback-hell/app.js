@@ -30,28 +30,47 @@
 //callback hell is when the code starts getting nested many times and the code gets messy
 //to help with this, you can use promises and async functions but below, I have shown nested callbacks
 
-const delayedColorChange = (newColor, delay, doNext) => {
-    setTimeout(() => {
-        document.body.style.backgroundColor = newColor;
-        doNext && doNext();
-    }, delay)
+// const delayedColorChange = (newColor, delay, doNext) => {
+//     setTimeout(() => {
+//         document.body.style.backgroundColor = newColor;
+//         doNext && doNext();
+//     }, delay)
+// }
+
+// delayedColorChange('red', 1000, () => {
+//     delayedColorChange('orange', 1000, () => {
+//         delayedColorChange('yellow', 1000, () => {
+//             delayedColorChange('green', 1000, () => {
+//                 delayedColorChange('blue', 1000, () => {
+//                     delayedColorChange('indigo', 1000, () => {
+//                         delayedColorChange('violet', 1000, () => {
+//                             delayedColorChange('black', 1000, () => {
+//                                 delayedColorChange('red', 1000, () => {
+//                                 })
+//                             })
+//                         })
+//                     })
+//                 })
+//             })
+//         })
+//     })
+// });
+
+
+//here is the solution using promises
+const delayedColorChange = (color, delay) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            document.body.style.backgroundColor = color;
+            resolve();
+        }, delay)
+    })
 }
 
-delayedColorChange('red', 1000, () => {
-    delayedColorChange('orange', 1000, () => {
-        delayedColorChange('yellow', 1000, () => {
-            delayedColorChange('green', 1000, () => {
-                delayedColorChange('blue', 1000, () => {
-                    delayedColorChange('indigo', 1000, () => {
-                        delayedColorChange('violet', 1000, () => {
-                            delayedColorChange('black', 1000, () => {
-                                delayedColorChange('red', 1000, () => {
-                                })
-                            })
-                        })
-                    })
-                })
-            })
-        })
-    })
-});
+delayedColorChange('red', 1000)
+.then(() => delayedColorChange('orange', 500))
+.then(() => delayedColorChange('yellow', 500))
+.then(() => delayedColorChange('green', 500))
+.then(() => delayedColorChange('blue', 500))
+.then(() => delayedColorChange('indigo', 500))
+.then(() => delayedColorChange('violet', 500))
