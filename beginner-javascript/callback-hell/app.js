@@ -68,9 +68,32 @@ const delayedColorChange = (color, delay) => {
 }
 
 delayedColorChange('red', 1000)
-.then(() => delayedColorChange('orange', 500))
-.then(() => delayedColorChange('yellow', 500))
-.then(() => delayedColorChange('green', 500))
-.then(() => delayedColorChange('blue', 500))
-.then(() => delayedColorChange('indigo', 500))
-.then(() => delayedColorChange('violet', 500))
+    .then(() => delayedColorChange('orange', 500))
+    .then(() => delayedColorChange('yellow', 500))
+    .then(() => delayedColorChange('green', 500))
+    .then(() => delayedColorChange('blue', 500))
+    .then(() => delayedColorChange('indigo', 500))
+    .then(() => delayedColorChange('violet', 500))
+
+
+//this code runs the same as above but it uses await so that the function resolves first
+//then it runs the next line of code, you don't have to use .then using async await
+async function rainbow() {
+    await delayedColorChange('red', 1000)
+    await delayedColorChange('orange', 1000)
+    await delayedColorChange('yellow', 1000)
+    await delayedColorChange('green', 1000)
+    await delayedColorChange('blue', 1000)
+    await delayedColorChange('indigo', 1000)
+    await delayedColorChange('violet', 1000)
+    return 'all done!'
+}
+
+// rainbow().then(() => console.log('end of rainbow'))
+
+async function printRainbow() {
+    await rainbow();
+    console.log('end of rainbow in printRainbow function')
+}
+
+printRainbow();
