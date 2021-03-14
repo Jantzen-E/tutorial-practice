@@ -1,20 +1,34 @@
-const fakeRequestCallback = (url, success, failure) => {
-    const delay = Math.floor(Math.random() * 4500) + 500;
-    setTimeout(() => {
-        if (delay > 4000) {
-            failure('Connection Timeout :(')
-        }
-        else {
-            success(`Here is your data from ${url}`)
-        }
-    }, delay)
-}
+// const fakeRequestCallback = (url, success, failure) => {
+//     const delay = Math.floor(Math.random() * 4500) + 500;
+//     setTimeout(() => {
+//         if (delay > 4000) {
+//             failure('Connection Timeout :(')
+//         }
+//         else {
+//             success(`Here is your data from ${url}`)
+//         }
+//     }, delay)
+// }
 
-const fakeRequestPromise = (url) => {
+// const fakeRequestPromise = (url) => {
+//     return new Promise((resolve, reject) => {
+//         const delay = Math.floor(Math.random() * (4500)) + 500;
+//         setTimeout(() => {
+//             if (delay > 4000) {
+//                 reject('Connection Timeout :(')
+//             }
+//             else {
+//                 resolve(`Here is your data from ${url}`)
+//             }
+//         }, delay)
+//     })
+// }
+
+const fakeRequest = (url) => {
     return new Promise((resolve, reject) => {
         const delay = Math.floor(Math.random() * (4500)) + 500;
         setTimeout(() => {
-            if (delay > 4000) {
+            if (delay > 2000) {
                 reject('Connection Timeout :(')
             }
             else {
@@ -22,6 +36,19 @@ const fakeRequestPromise = (url) => {
             }
         }, delay)
     })
+}
+
+async function makeTwoRequests() {
+    try{
+        let data1 = await fakeRequest('/page1');
+        console.log(data1);
+        let data2 = await fakeRequest('/page2');
+        console.log(data2);
+    }
+    catch (e) {
+        console.log('you caught an error')
+        console.log('error is :', e)
+    }
 }
 
 
@@ -53,25 +80,25 @@ const fakeRequestPromise = (url) => {
 //this is the shorter way to write the same code above, if a request is rejected, it falls through
 //to the .catch at the very end
 //the difference is you use the keyword return in each .then statement so that nesting is not necessary
-fakeRequestPromise('yelp.com/api/coffee/page1')
-    .then((data) => {
-        console.log('it worked')
-        console.log(data)
-        return fakeRequestPromise('yelp.com/api/coffee/page2')
-    })
-    .then((data) => {
-        console.log('it worked for page 2')
-        console.log(data)
-        return fakeRequestPromise('yelp.com/api/coffee/page3')
-    })
-    .then((data) => {
-        console.log('it worked for page 3')
-        console.log(data)
-    })
-    .catch((err) => {
-        console.log('oh no, a request failed')
-        console.log(err)
-    })
+// fakeRequestPromise('yelp.com/api/coffee/page1')
+//     .then((data) => {
+//         console.log('it worked')
+//         console.log(data)
+//         return fakeRequestPromise('yelp.com/api/coffee/page2')
+//     })
+//     .then((data) => {
+//         console.log('it worked for page 2')
+//         console.log(data)
+//         return fakeRequestPromise('yelp.com/api/coffee/page3')
+//     })
+//     .then((data) => {
+//         console.log('it worked for page 3')
+//         console.log(data)
+//     })
+//     .catch((err) => {
+//         console.log('oh no, a request failed')
+//         console.log(err)
+//     })
 
 //this is an example of callback hell as well
 //each function has a success callback and a failure callback
