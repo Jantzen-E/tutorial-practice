@@ -1,13 +1,13 @@
-//*******************practice template strings*******************************
+// *******************practice template strings*******************************ff
 // let firstName = prompt('What is your first name?');
 // let lastName = prompt('what is your last name?');
 // let age = prompt('what is your age?');
 // let fullName = alert(`I am guessing that your full name is ${firstName}${lastName} and that you are ${age} years old`);
-// alert(fullName);
+// alert('welcome ' + firstName + ' ' + lastName);
 
 
 //****************practice simple JavaScript variables, assignments, and template strings****************
-//daysAlive accounts for leap year
+// daysAlive accounts for leap year
 // let question = prompt('how old are you?');
 // let daysAlive = question * 365.25;
 // let hoursAlive = daysAlive * 24;
@@ -19,26 +19,30 @@
 
 
 //********************practice conditionals******************* */
-// let age = Number(prompt('how old are you?'));
+let age = Number(prompt('how old are you?'));
 
-// if (age < 0) {
-//     alert('dont even think about it')
-// }
-// else if (age < 18) {
-//     alert('you cannot enter this venue')
-// }
-// else if (age >= 18 && age <= 20) {
-//     alert('you can enter but you cannot drink')
-// }
-// else if (age === 21) {
-//     alert('happy 21st birthday')
-// }
-// else if (age > 100) {
-//     alert('you might not want to drink')
-// }
-// else {
-//     alert('you can enter and drink')
-// }
+if (age === 0) {
+    alert('how did you get here and where are your parents?')
+}
+
+if (age < 0) {
+    alert('you are still in the womb, dont even think about it!')
+}
+else if (age < 18) {
+    alert('you cannot enter this venue')
+}
+else if (age >= 18 && age <= 20) {
+    alert('you can enter but you cannot drink')
+}
+else if (age === 21) {
+    alert('happy 21st birthday')
+}
+else if (age > 100) {
+    alert('you might not want to drink')
+}
+else {
+    alert('you can enter and drink')
+}
 
 
 //****************simple guessing game************************** */
