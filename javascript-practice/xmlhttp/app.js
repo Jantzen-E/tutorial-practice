@@ -1,3 +1,7 @@
+//this is the old more tedious way to request info from API's
+//xhr = xml http requests
+//xml = extensible markup language
+
 const req = new XMLHttpRequest();
 
 req.onload = function () {
@@ -14,5 +18,3 @@ req.onerror = function () {
 
 req.open('GET', 'https://api.cryptonator.com/api/ticker/btc-usd')
 req.send();
-
-// alert('hello')
