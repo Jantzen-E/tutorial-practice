@@ -61,6 +61,15 @@ class Color {
         const {h, s, l} = this;
         return `hsl(${h}, ${s}%, ${l}%)`
     }
+    fullSaturation() {
+        const {h, l} = this;
+        return `hsl(${h}, 100%, ${l}%)`
+    }
+    opposite() {
+        const {h, s, l} = this;
+        const newHue = (h + 180) % 360;
+        return `hsl(${newHue}, ${s}%, ${l}%)`
+    }
     calcHSL() {
         let {r, g, b} = this;
         r /= 255;
@@ -81,7 +90,7 @@ class Color {
         else 
            h = (r - g) / delta + 4;
     
-        h = Math.round(h + 60);
+        h = Math.round(h * 60);
     
         if (h < 0) h += 360;
     
@@ -99,3 +108,4 @@ class Color {
 
 const red = new Color(255, 67, 89, 'tomato');
 const white = new Color(255, 255, 255, 'white');
+const orange = new Color(230, 126, 34, 'carrot');
