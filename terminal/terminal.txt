@@ -1,0 +1,16 @@
+//mkdir is make directory
+
+//there are absolute paths that start with / for example /Users/Me 
+//there are relative paths that mean relative to where you are in the folder organization
+//an example of relative path is cd .. or cd terminal
+
+// type ls -l in the terminal which is called a flag and it gives you more detailed information about the files in
+//the current folder
+
+//pwd is print working directory
+
+//rm index.html removes index.html permanently
+
+//rmdir Projects removes the whole directory (folder) if it is already empty
+
+//rm -rf Projects removes the whole directory (folder) even if it is not empty    rf = recursive force
