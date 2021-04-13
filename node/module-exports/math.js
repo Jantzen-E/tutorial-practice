@@ -9,6 +9,11 @@ const square = x => x * x;
 // module.exports.PI = PI;
 // module.exports.square = square;
 
+//you can also use a shortcut method as shown below
+exports.square = square;
+exports.PI = PI;
+
+
 
 
 //this creates an object showing each function then exports the object

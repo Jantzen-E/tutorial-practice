@@ -9,3 +9,7 @@ console.log(math);
 console.log(math.PI);
 
 console.log(math.square(9));
+
+//this requires an entire directory using the export in index.js
+const cats = require('./shelter')
+console.log('required an entire directory', cats);
