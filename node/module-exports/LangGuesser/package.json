@@ -1,0 +1,11 @@
+{
+  "name": "langguesser",
+  "version": "1.0.0",
+  "description": "guess languages based on short text",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
