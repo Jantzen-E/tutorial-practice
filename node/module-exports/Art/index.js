@@ -9,3 +9,7 @@ figlet('Hello World!', function (err, data) {
     }
     console.log(data.green)
 });
+
+//type "npm install" to install all of the dependecies from another project that is in package.json
+//without having to type "npm install (each individual dependency)"
+//it installs all of the dependencies for you without you having to specify
